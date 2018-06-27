@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    tools:context=".ui.list.view.ContactListActivity">
+
+  <ProgressBar
+      android:visibility="gone"
+      android:id="@+id/progress_bar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:indeterminate="true"
+      />
+
+  <android.support.v7.widget.RecyclerView
+      android:visibility="gone"
+      android:id="@+id/contact_list"
+      android:name="com.donato.contactsapp.ContactListFragment"
+      android:layout_width="@dimen/item_width"
+      android:layout_height="match_parent"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      app:layoutManager="LinearLayoutManager"
+      tools:context="com.donato.contactsapp.ui.list.view.ContactListActivity"
+      tools:listitem="@layout/item_contact_list"/>
+
+  <FrameLayout
+      android:id="@+id/contact_detail_container"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="3"/>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/view_padding"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+
+  <TextView
+      android:id="@+id/detail_mobile"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      tools:text="086+1234567"
+      android:layout_margin="@dimen/text_margin"
+      android:drawableStart="@mipmap/ic_phone"
+      android:drawablePadding="@dimen/text_margin"
+      android:textColor="@color/colorTextTitle"
+      android:textSize="@dimen/text_title"/>
+
+  <TextView
+      android:id="@+id/mobile_text"
+      app:layout_constraintTop_toBottomOf="@+id/detail_mobile"
+      app:layout_constraintStart_toStartOf="@+id/detail_mobile"
+      app:layout_constraintEnd_toEndOf="@+id/detail_mobile"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/mobile"
+      android:paddingBottom="@dimen/text_margin"
+      android:textColor="@color/colorTextSubTitle"
+      android:textSize="@dimen/text_subtitle"/>
+
+  <View
+      android:id="@+id/split_view"
+      app:layout_constraintTop_toBottomOf="@+id/mobile_text"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_width="0dp"
+      android:layout_height="2dp"
+      android:background="@color/grey_dark"
+  />
+
+</android.support.constraint.ConstraintLayout>
